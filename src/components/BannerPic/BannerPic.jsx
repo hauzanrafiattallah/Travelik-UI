@@ -7,8 +7,13 @@ const BannerPic = ({ img }) => {
     backgroundPosition: "center",
     height: "400px",
   };
+
   return (
-    <div data-aos="zoom-in" className="h-[400px] w-full" style={bgImage}></div>
+    <div
+      data-aos="zoom-in"
+      className="h-[400px] w-full bg-cover bg-center sm:bg-contain sm:bg-no-repeat"
+      style={bgImage}
+    ></div>
   );
 };
 

@@ -15,7 +15,7 @@ const Banner = () => {
               <div data-aos="flip-up">
                 <img
                   src={TravelImg}
-                  alt="biryani img"
+                  alt="travel img"
                   className="max-w-[450px] h-[350px] w-full mx-auto drop-shadow-[5px_5px_12px_rgba(0,0,0,0.7)] object-cover"
                 />
               </div>
@@ -25,22 +25,20 @@ const Banner = () => {
                   data-aos="fade-up"
                   className="text-3xl sm:text-4xl font-bold"
                 >
-                  Explore all corners of The world with us
+                  Jelajahi semua sudut dunia bersama kami
                 </h1>
                 <p
                   data-aos="fade-up"
                   className="text-sm text-gray-500 tracking-wide leading-8"
                 >
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Eaque reiciendis inventore iste ratione ex alias quis magni at
-                  optio ratione ex alias quis magni at optio
+                  Bersama Travelik Tour, kami menawarkan pengalaman liburan yang tak terlupakan dengan paket perjalanan yang mencakup penerbangan, akomodasi, koneksi Wi-fi yang cepat, dan hidangan lokal yang lezat. Kami siap membantu Anda menjelajahi destinasi impian dengan nyaman dan aman. Segera bergabunglah dengan ribuan pelanggan yang telah mempercayai kami untuk liburan mereka.
                   <br />
                 </p>
                 <div data-aos="zoom-in" className="grid grid-cols-2 gap-6">
                   <div className="space-y-6">
                     <div className="flex items-center gap-4">
                       <MdFlight className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-violet-100 dark:bg-violet-400" />
-                      <p>Flight</p>
+                      <p>Penerbangan</p>
                     </div>
                     <div className="flex items-center gap-4">
                       <MdOutlineLocalHotel className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400" />
@@ -54,7 +52,7 @@ const Banner = () => {
                     </div>
                     <div className="flex items-center gap-4">
                       <IoFastFoodSharp className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-yellow-100 dark:bg-yellow-400" />
-                      <p>Foods</p>
+                      <p>Makanan</p>
                     </div>
                   </div>
                 </div>
