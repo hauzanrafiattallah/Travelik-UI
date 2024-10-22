@@ -16,11 +16,14 @@ const BlogsDetails = (props) => {
         />
       </div>
       <div className="container">
-        <p className="text-slate-600 text-sm py-3 mt-10">
-          written by {author} on {date}
+        {/* Teks diubah ke Bahasa Indonesia dan jarak antar elemen ditambahkan */}
+        <p className="text-slate-600 text-sm py-3 mt-4">
+          Ditulis oleh {author} pada {date}
         </p>
-        <h1 className="text-2xl font-semibold">{title}</h1>
-        <p>{description}</p>
+        <h1 className="text-2xl font-semibold mb-4">{title}</h1>{" "}
+        {/* Jarak bawah ditambahkan */}
+        <p className="leading-relaxed">{description}</p>{" "}
+        {/* Tambahkan jarak dan leading */}
       </div>
 
       {/* All Blogs Section */}
