@@ -1,5 +1,5 @@
 import React from "react";
-import FooterLogo from "../../assets/logo.png";
+import FooterLogo from "../../assets/logo.webp";
 import {
   FaFacebook,
   FaInstagram,
