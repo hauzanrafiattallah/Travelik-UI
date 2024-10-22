@@ -49,7 +49,11 @@ const Navbar = ({ handleOrderPopup }) => {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4  font-bold text-2xl">
               <Link to={"/"} onClick={() => window.scrollTo(0, 0)}>
-                <img src={Logo} alt="" className="h-16 w-16 sm:h-20 sm:w-20" />
+                <img
+                  src={Logo}
+                  alt=""
+                  className="h-16 w-16 sm:h-20 sm:w-20 mb-0 sm:mb-2"
+                />
               </Link>
             </div>
             <div className="hidden md:block">
