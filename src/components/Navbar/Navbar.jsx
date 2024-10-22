@@ -118,7 +118,7 @@ const Navbar = ({ handleOrderPopup }) => {
                   handleOrderPopup();
                 }}
               >
-                Pesan Sekarang
+                Reservasi
               </button>
 
               {/* Hamburger menu muncul di layar kecil (mulai dari md ke bawah) */}
