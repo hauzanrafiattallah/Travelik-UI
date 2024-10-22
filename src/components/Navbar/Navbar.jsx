@@ -42,22 +42,25 @@ const Navbar = ({ handleOrderPopup }) => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
   return (
     <>
       <nav className="fixed top-0 right-0 w-full z-50 bg-white backdrop-blur-sm text-black shadow-md">
         <div className="container py-3 sm:py-0">
           <div className="flex justify-between items-center">
-            <div className="flex items-center gap-4  font-bold text-2xl">
+            <div className="flex items-center gap-4 font-bold text-2xl">
               <Link to={"/"} onClick={() => window.scrollTo(0, 0)}>
                 <img
                   src={Logo}
-                  alt=""
+                  alt="Travelik Logo"
                   className="h-16 w-16 sm:h-20 sm:w-20 mb-0 sm:mb-2"
                 />
               </Link>
             </div>
-            <div className="hidden md:block">
-              <ul className="flex items-center gap-6 ">
+
+            {/* Menu utama disembunyikan di layar kecil (mulai dari md ke bawah) */}
+            <div className="hidden lg:block">
+              <ul className="flex items-center gap-6">
                 <li className="py-4">
                   <NavLink to="/" activeClassName="active">
                     Beranda
@@ -106,6 +109,8 @@ const Navbar = ({ handleOrderPopup }) => {
                 </li>
               </ul>
             </div>
+
+            {/* Tombol Pesan Sekarang */}
             <div className="flex items-center gap-4">
               <button
                 className="bg-gradient-to-r from-primary to-secondary hover:bg-bg-gradient-to-r hover:from-secondary hover:bg-primary transition-all duration-600 text-white px-3 py-1 rounded-full"
@@ -115,11 +120,13 @@ const Navbar = ({ handleOrderPopup }) => {
               >
                 Pesan Sekarang
               </button>
-              <div className="md:hidden block">
+
+              {/* Hamburger menu muncul di layar kecil (mulai dari md ke bawah) */}
+              <div className="lg:hidden block">
                 {showMenu ? (
                   <HiMenuAlt1
                     onClick={toggleMenu}
-                    className=" cursor-pointer transition-all"
+                    className="cursor-pointer transition-all"
                     size={30}
                   />
                 ) : (
@@ -133,6 +140,8 @@ const Navbar = ({ handleOrderPopup }) => {
             </div>
           </div>
         </div>
+
+        {/* Responsive menu untuk tampilan mobile */}
         <ResponsiveMenu setShowMenu={setShowMenu} showMenu={showMenu} />
       </nav>
     </>

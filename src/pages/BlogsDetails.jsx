@@ -8,7 +8,7 @@ const BlogsDetails = (props) => {
 
   return (
     <div className="pt-20">
-      <div className="h-auto max-h-[500px] overflow-hidden mt-4">
+      <div className="h-auto max-h-[500px] overflow-hidden mt-4 sm:mt-7">
         <img
           src={image}
           alt={title}
