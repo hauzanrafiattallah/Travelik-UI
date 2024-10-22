@@ -7,34 +7,31 @@ import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 
 export const NavbarLinks = [
   {
-    name: "Home",
+    name: "Beranda",
     link: "/",
   },
   {
-    name: "About",
+    name: "Tentang Kami",
     link: "/about",
   },
   {
-    name: "Blogs",
+    name: "Blog",
     link: "/blogs",
   },
   {
-    name: "Best Places",
+    name: "Destinasi Terbaik",
     link: "/best-places",
   },
 ];
 
 const DropdownLinks = [
   {
-    name: "Our Services",
+    name: "Layanan Kami",
     link: "/#services",
   },
+
   {
-    name: "Top Brands",
-    link: "/#mobile_brands",
-  },
-  {
-    name: "Location",
+    name: "Lokasi",
     link: "/#location",
   },
 ];
@@ -48,50 +45,42 @@ const Navbar = ({ handleOrderPopup }) => {
   return (
     <>
       <nav className="fixed top-0 right-0 w-full z-50 bg-white backdrop-blur-sm text-black shadow-md">
-        <div className="bg-gradient-to-r from-primary to-secondary text-white ">
-          <div className="container py-[2px] sm:block hidden">
-            <div className="flex items-center justify-between">
-              <p className="text-sm">20% off on next booking</p>
-              <p>mobile no. +91 123456789</p>
-            </div>
-          </div>
-        </div>
         <div className="container py-3 sm:py-0">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4  font-bold text-2xl">
               <Link to={"/"} onClick={() => window.scrollTo(0, 0)}>
-                <img src={Logo} alt="" className="h-16" />
+                <img src={Logo} alt="" className="h-16 w-16 sm:h-20 sm:w-20" />
               </Link>
-              {/* <span>TCJ Tourism</span> */}
             </div>
             <div className="hidden md:block">
               <ul className="flex items-center gap-6 ">
                 <li className="py-4">
                   <NavLink to="/" activeClassName="active">
-                    Home
-                  </NavLink>
-                </li>
-                <li className="py-4">
-                  <NavLink to="/blogs" activeClassName="active">
-                    Blogs
-                  </NavLink>
-                </li>
-                <li className="py-4">
-                  <NavLink to="/best-places" activeClassName="active">
-                    Best Places
+                    Beranda
                   </NavLink>
                 </li>
                 <li className="py-4">
                   <NavLink to="/about" activeClassName="active">
-                    About
+                    Tentang Kami
                   </NavLink>
                 </li>
+                <li className="py-4">
+                  <NavLink to="/blogs" activeClassName="active">
+                    Blog
+                  </NavLink>
+                </li>
+                <li className="py-4">
+                  <NavLink to="/best-places" activeClassName="active">
+                    Destinasi Terbaik
+                  </NavLink>
+                </li>
+
                 <li className="group relative cursor-pointer">
                   <a
                     href="/#home"
                     className="flex h-[72px] items-center gap-[2px]"
                   >
-                    Quick Links{" "}
+                    Lainnya{" "}
                     <span>
                       <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
                     </span>
@@ -120,9 +109,8 @@ const Navbar = ({ handleOrderPopup }) => {
                   handleOrderPopup();
                 }}
               >
-                Book Now
+                Pesan Sekarang
               </button>
-              {/* Mobile Hamburger icon */}
               <div className="md:hidden block">
                 {showMenu ? (
                   <HiMenuAlt1
