@@ -29,7 +29,6 @@ const DropdownLinks = [
     name: "Layanan Kami",
     link: "/#services",
   },
-
   {
     name: "Lokasi",
     link: "/#location",
@@ -62,22 +61,42 @@ const Navbar = ({ handleOrderPopup }) => {
             <div className="hidden lg:block">
               <ul className="flex items-center gap-6">
                 <li className="py-4">
-                  <NavLink to="/" activeClassName="active">
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive ? "active-class" : ""
+                    }
+                  >
                     Beranda
                   </NavLink>
                 </li>
                 <li className="py-4">
-                  <NavLink to="/about" activeClassName="active">
+                  <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                      isActive ? "active-class" : ""
+                    }
+                  >
                     Tentang Kami
                   </NavLink>
                 </li>
                 <li className="py-4">
-                  <NavLink to="/best-places" activeClassName="active">
+                  <NavLink
+                    to="/best-places"
+                    className={({ isActive }) =>
+                      isActive ? "active-class" : ""
+                    }
+                  >
                     Destinasi Terbaik
                   </NavLink>
                 </li>
                 <li className="py-4">
-                  <NavLink to="/blogs" activeClassName="active">
+                  <NavLink
+                    to="/blogs"
+                    className={({ isActive }) =>
+                      isActive ? "active-class" : ""
+                    }
+                  >
                     Blog
                   </NavLink>
                 </li>

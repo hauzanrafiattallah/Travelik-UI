@@ -7,3 +7,7 @@
     @apply text-primary;
   }
 }
+.active-class {
+  color: #00c3c7; /* Contoh warna untuk link aktif */
+  font-weight: bold;
+}

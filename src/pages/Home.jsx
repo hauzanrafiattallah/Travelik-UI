@@ -5,8 +5,9 @@ import BlogsComp from "../components/Blogs/BlogsComp";
 import Places from "../components/Places/Places";
 import Testimonial from "../components/Testimonial/Testimonial";
 import Banner from "../components/Banner/Banner";
-import Banner2 from "../assets/travel-cover2.jpg";
+import BannerImg from "../assets/banner-img.jpg";
 import OrderPopup from "../components/OrderPopup/OrderPopup";
+import BannerPic from "../components/BannerPic/BannerPic";
 
 const Home = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -29,7 +30,7 @@ const Home = () => {
           <Hero />
         </div>
         <Places handleOrderPopup={handleOrderPopup} />
-        <BannerPic img={Banner2} />
+        <BannerPic img={BannerImg} />
         <BlogsComp />
         <Banner />
         <Testimonial />
