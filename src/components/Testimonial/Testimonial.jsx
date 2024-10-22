@@ -1,24 +1,27 @@
 import React from "react";
 import Slider from "react-slick";
+import img1 from "../../assets/komeng.webp";
+import img2 from "../../assets/dedy.jpg";
+import img3 from "../../assets/kucing-akmal.jpg";
 
-const testimonialData = [
+const dataTestimonial = [
   {
     id: 1,
-    name: "Samuel",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/101/101",
+    nama: "Komeng",
+    teks: "Perjalanan yang sangat memuaskan! Semua tempat yang kami kunjungi menarik dan terorganisir dengan baik. Saya dan keluarga sangat menikmati liburan.",
+    img: img1,
   },
   {
-    id: 1,
-    name: "John Doe",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/102/102",
+    id: 2,
+    nama: "Dedi Kok Botak",
+    teks: "Layanan yang diberikan Travelik Tour sangat luar biasa. Dari awal hingga akhir perjalanan, semuanya lancar dan memuaskan. Sangat direkomendasikan!",
+    img: img2,
   },
   {
-    id: 1,
-    name: "Smith",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://picsum.photos/103/103",
+    id: 3,
+    nama: "Kucing Akmal",
+    teks: "Pengalaman yang tak terlupakan bersama Travelik Tour. Semua fasilitas disediakan dengan baik, dan panduan wisata sangat profesional serta ramah.",
+    img: img3,
   },
 ];
 
@@ -64,38 +67,45 @@ const Testimonial = () => {
   return (
     <>
       <div data-aos="fade-up" data-aos-duration="300" className="py-10">
-        <div className="container">
+        <div className="container mx-auto lg:max-w-[1200px] px-4 lg:px-8">
+          {" "}
+          {/* Ubah max-w agar lebih lebar */}
           {/* Header section */}
-          <div className="text-center mb-20 max-w-[400px] mx-auto">
-            <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-              Testimonial
-            </p>
-            <h1 className="text-3xl font-bold">Testimonial</h1>
-            <p className="text-xs text-gray-400">
+          <div className="text-center mb-7 max-w-[800px] mx-auto">
+            <h1 className="text-4xl font-bold">Testimoni Pelanggan</h1>{" "}
+            {/* Teks lebih besar */}
+            <p className="text-sm lg:text-base text-gray-400 mt-7">
               {" "}
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-              nesciunt explicabo a! Laborum delectus aliquam labore, earum rerum
-              quam! Nulla?
+              {/* Ukuran teks lebih fleksibel */}
+              Berikut adalah beberapa testimoni pelanggan yang telah menikmati
+              layanan Travelik Tour Indonesia. Mereka telah berbagi pengalaman
+              seru mereka!
             </p>
           </div>
           {/* testimonial section */}
           <div
             data-aos="zoom-in"
             data-aos-duration="300"
-            className="grid grid-cols-1 max-w-[800px] mx-auto gap-6"
+            className="grid grid-cols-1 max-w-[1200px] mx-auto gap-6 px-4 lg:px-0"
           >
             <Slider {...settings}>
-              {testimonialData.map(({ id, name, text, img }) => {
+              {dataTestimonial.map(({ id, nama, teks, img }) => {
                 return (
                   <div key={id} className="my-6">
-                    <div className="flex flex-col justify-center items-center gap-4 text-center shadow-lg p-4 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative">
+                    <div className="flex flex-col justify-center items-center gap-4 text-center shadow-lg p-6 mx-6 lg:mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative">
+                      {" "}
+                      {/* Padding dan margin */}
                       <img
                         src={img}
-                        alt=""
-                        className="rounded-full block mx-auto"
+                        alt={nama}
+                        className="rounded-full block mx-auto h-28 w-28"
                       />
-                      <h1 className="text-xl font-bold">{name}</h1>
-                      <p className="text-gray-500 text-sm">{text}</p>
+                      <h1 className="text-xl lg:text-2xl font-bold">{nama}</h1>{" "}
+                      {/* Ukuran teks lebih besar */}
+                      <p className="text-gray-500 text-sm lg:text-base">
+                        {teks}
+                      </p>{" "}
+                      {/* Ukuran teks fleksibel */}
                       <p className="text-black/20 text-9xl font-serif absolute top-0 right-0">
                         ,,
                       </p>
