@@ -8,141 +8,62 @@ import {
   FaMobileAlt,
 } from "react-icons/fa";
 import NatureVid from "../../assets/video/footer.mp4";
-import { Link } from "react-router-dom";
-
-const FooterLinks = [
-  {
-    title: "Home",
-    link: "/",
-  },
-  {
-    title: "About",
-    link: "/about",
-  },
-  {
-    title: "Best Places",
-    link: "/best-places",
-  },
-  {
-    title: "Blogs",
-    link: "/blogs",
-  },
-];
 
 const Footer = () => {
   return (
     <>
-      <div className=" dark:bg-gray-950 py-10 relative overflow-hidden">
+      <div className="dark:bg-gray-950 py-6 relative overflow-hidden">
         <video
           autoPlay
           loop
           muted
-          className="absolute right-0 top-0 h-full overflow-hidden w-full object-cover z-[-1]"
+          className="absolute right-0 top-0 h-full w-full object-cover z-[-1]"
         >
           <source src={NatureVid} type="video/mp4" />
         </video>
-        <div className="container">
-          <div className="grid md:grid-cols-3 py-5 bg-white/80 backdrop-blur-sm rounded-t-xl">
-            <div className="py-8 px-4">
-              <h1 className="flex items-center gap-3 text-xl sm:text-3xl font-bold text-justify sm:text-left">
-                <img src={FooterLogo} alt="" className="max-h-[60px]" />
-                {/* TravelloGo */}
-              </h1>
-              <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                facere ab hic accusamus omnis dolor voluptatibus illo, tempore
-                eum tenetur.
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Konten Footer */}
+          <div className="py-6 bg-white/80 backdrop-blur-sm rounded-t-lg flex flex-col items-center text-center">
+            <div className="py-4 px-6">
+              <div className="flex flex-col items-center gap-3 mb-4">
+                <img
+                  src={FooterLogo}
+                  alt="Logo"
+                  className="h-[80px] w-[80px] sm:h-[120px] sm:w-[120px]" // Ukuran logo lebih besar di layar besar
+                />
+                <h1 className="text-2xl sm:text-5xl font-bold">
+                  Travelik Tour
+                </h1>
+              </div>
+              <p className="text-md sm:text-lg leading-relaxed mb-4">
+                Kami adalah perusahaan perjalanan yang memberikan layanan
+                terbaik untuk eksplorasi tempat wisata yang menakjubkan di
+                seluruh Indonesia.
               </p>
-              <br />
-              <div className="flex items-center gap-3 ">
-                <FaLocationArrow />
-                <p>Noida, Uttar Pradesh</p>
-              </div>
-              <div className="flex items-center gap-3 mt-3">
-                <FaMobileAlt />
-                <p>+91 123456789</p>
-              </div>
-              {/* social handles */}
-              <div>
-                <div className="flex items-center gap-3 mt-6">
-                  <a href="#">
-                    <FaInstagram className="text-3xl" />
-                  </a>
-                  <a href="#">
-                    <FaFacebook className="text-3xl" />
-                  </a>
-                  <a href="#">
-                    <FaLinkedin className="text-3xl" />
-                  </a>
+              <div className="flex flex-col items-center gap-2 text-sm sm:text-base mb-6">
+                <div className="flex items-center gap-2">
+                  <FaLocationArrow />
+                  <p>Bali, Indonesia</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaMobileAlt />
+                  <p>+62-81323563283</p>
                 </div>
               </div>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
-              <div>
-                <div className="py-8 px-4">
-                  <h1 className="text-xl font-bold text-justify sm:text-left mb-3">
-                    Important Links
-                  </h1>
-                  <ul className="flex flex-col gap-3">
-                    {FooterLinks.map((link) => (
-                      <li className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-700 dark:text-gray-200">
-                        <Link
-                          to={link.link}
-                          onClick={() => window.scrollTo(0, 0)}
-                        >
-                          <span>&#11162;</span>
-                          <span>{link.title}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="flex items-center gap-4 justify-center mb-6">
+                <a href="#" className="text-gray-700 hover:text-primary">
+                  <FaInstagram className="text-2xl sm:text-3xl" />
+                </a>
+                <a href="#" className="text-gray-700 hover:text-primary">
+                  <FaFacebook className="text-2xl sm:text-3xl" />
+                </a>
+                <a href="#" className="text-gray-700 hover:text-primary">
+                  <FaLinkedin className="text-2xl sm:text-3xl" />
+                </a>
               </div>
-              <div>
-                <div className="py-8 px-4">
-                  <h1 className="text-xl font-bold text-justify sm:text-left mb-3">
-                    Important Links
-                  </h1>
-                  <ul className="flex flex-col gap-3">
-                    {FooterLinks.map((link) => (
-                      <li className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-700 dark:text-gray-200">
-                        <Link
-                          to={link.link}
-                          onClick={() => window.scrollTo(0, 0)}
-                        >
-                          <span>&#11162;</span>
-                          <span>{link.title}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="text-center text-gray-500 text-sm sm:text-base mt-4">
+                &copy; 2024 All rights reserved
               </div>
-              <div>
-                <div className="py-8 px-4">
-                  <h1 className="text-xl font-bold text-justify sm:text-left mb-3">
-                    Important Links
-                  </h1>
-                  <ul className="flex flex-col gap-3">
-                    {FooterLinks.map((link) => (
-                      <li className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-700 dark:text-gray-200">
-                        <Link
-                          to={link.link}
-                          onClick={() => window.scrollTo(0, 0)}
-                        >
-                          <span>&#11162;</span>
-                          <span>{link.title}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="text-center py-5 border-t-2 border-gray-300/50 bg-primary text-white">
-              @copyright 2024 All rights reserved || Made with ❤️ by Dilshad
             </div>
           </div>
         </div>
