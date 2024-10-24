@@ -104,10 +104,6 @@ const Testimonial = () => {
                       {/* Ukuran teks lebih besar */}
                       <p className="text-gray-500 text-sm lg:text-base">
                         {teks}
-                      </p>{" "}
-                      {/* Ukuran teks fleksibel */}
-                      <p className="text-black/20 text-9xl font-serif absolute top-0 right-0">
-                        ,,
                       </p>
                     </div>
                   </div>
